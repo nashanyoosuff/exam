@@ -5,7 +5,7 @@ const studentDatabase = {
         
     "200871403665":{
     name:"FAHEER FATHIMA INASA",
-        result:""
+        result:"" 
 }
 
     

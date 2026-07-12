@@ -1,8 +1,14 @@
 const studentDatabase = {
-    "200005803435": { 
-        name: "Ahmath", 
-        result: "A" 
+    "200871904626": { 
+      name: "FAEES ZAINAB SANAH", 
+        result: "" 
     }
+
+    "200871403665": { 
+      name: "FAHEER FATHIMA INASA"
+        result: "" 
+}
+    
     // மேலதிக மாணவர்களின் விபரங்களை இங்கே வரிசையாகச் சேர்க்கலாம்
 };
 
@@ -16,7 +22,7 @@ function searchStudent() {
         const day = String(today.getDate()).padStart(2, '0');
         const month = String(today.getMonth() + 1).padStart(2, '0'); 
         const year = today.getFullYear();
-        const formattedDate = `திகதி: ${day}/${month}/${year}`;
+        const formattedDate = `Date: ${day}/${month}/${year}`;
 
         // புதிய பக்கத்தை திறத்தல்
         const printWindow = window.open("", "_blank");

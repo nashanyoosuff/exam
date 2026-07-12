@@ -7,7 +7,7 @@ const studentDatabase = {
     "200871403665": { 
       name: "FAHEER FATHIMA INASA"
         result: "" 
-}
+
     
     // மேலதிக மாணவர்களின் விபரங்களை இங்கே வரிசையாகச் சேர்க்கலாம்
 };

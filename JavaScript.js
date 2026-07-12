@@ -1,12 +1,8 @@
 const studentDatabase = {
-    "200871904626": { 
+    "200871904626": {
       name: "FAEES ZAINAB SANAH", 
-        result: ""  
-    }
-
-    "200871403665": { 
-      name: "FAHEER FATHIMA INASA",
-        result: "" 
+        result: "" }
+    
 }
     
     // மேலதிக மாணவர்களின் விபரங்களை இங்கே வரிசையாகச் சேர்க்கலாம்

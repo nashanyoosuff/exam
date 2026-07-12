@@ -1,24 +1,21 @@
-// மாணவர் தரவுத்தளம் (Database)
 const studentDatabase = {
     "200871904626": {
-        name: "FAEES ZAINAB SANAH", 
-        result: "A" 
-    },
-    "200871403665": {
-        name: "FAHEER FATHIMA INASA",
-        result: "B" 
-    } 
-    // மேலதிக மாணவர்களின் விபரங்களை இங்கே கமா (,) இட்டுச் சேர்க்கலாம்
+      name: "FAEES ZAINAB SANAH", 
+        result: "" }
+        ,
+        
+    "200871403665":{
+    name:"FAHEER FATHIMA INASA",
+        result:"" 
+} 
+
+    
+    // மேலதிக மாணவர்களின் விபரங்களை இங்கே வரிசையாகச் சேர்க்கலாம்
 };
 
 function searchStudent() {
-    const nicInput = document.getElementById("nicInput");
-    const nic = nicInput.value.trim();
-    const errorDiv = document.getElementById("errorMessage");
+    const nic = document.getElementById("nicInput").value.trim();
     
-    // முதலில் பழைய பிழைச் செய்திகளை மறைக்கிறோம்
-    errorDiv.style.display = "none";
-
     if (studentDatabase[nic]) {
         const student = studentDatabase[nic];
         
@@ -38,7 +35,7 @@ function searchStudent() {
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
                 <title>Result - ${nic}</title>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"><\/script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
                 
                 <style>
                     * { box-sizing: border-box; }
@@ -80,9 +77,26 @@ function searchStudent() {
                         margin-bottom: 18px;
                     }
 
-                    .print-brand { margin: 0; color: #1a5276; font-size: 28px; font-weight: bold; }
-                    .print-title { margin: 6px 0 0 0; color: #27ae60; font-size: 16px; font-weight: bold; }
-                    .print-date { font-size: 14px; color: #566573; margin-top: 6px; font-weight: 500; }
+                    .print-brand {
+                        margin: 0;
+                        color: #1a5276;
+                        font-size: 28px;
+                        font-weight: bold;
+                    }
+
+                    .print-title {
+                        margin: 6px 0 0 0;
+                        color: #27ae60;
+                        font-size: 16px;
+                        font-weight: bold;
+                    }
+
+                    .print-date {
+                        font-size: 14px;
+                        color: #566573;
+                        margin-top: 6px;
+                        font-weight: 500;
+                    }
 
                     .label {
                         font-weight: bold;
@@ -115,7 +129,11 @@ function searchStudent() {
                         line-height: 1.5;
                     }
 
-                    .teacher-name { font-weight: bold; color: #1a5276; font-size: 14px; }
+                    .teacher-name {
+                        font-weight: bold;
+                        color: #1a5276;
+                        font-size: 14px;
+                    }
 
                     .action-buttons {
                         margin-top: 30px;
@@ -163,7 +181,11 @@ function searchStudent() {
 
                     @media (max-width: 480px) {
                         body { padding: 10px; }
-                        .result-card { max-width: 520px; padding: 40px; padding-bottom: 100px; }
+                        .result-card {
+                            max-width: 520px;
+                            padding: 40px;
+                            padding-bottom: 100px;
+                        }
                         .print-brand { font-size: 28px; }
                         .print-title { font-size: 16px; }
                         .data-value { font-size: 18px; padding: 14px; }
@@ -214,7 +236,7 @@ function searchStudent() {
                             marquees.forEach(m => m.style.display = 'block');
                         });
                     }
-                <\/script>
+                </script>
             </head>
             <body>
                 <div class="moving-text top-marquee">Information Communication Technology</div>
@@ -253,13 +275,6 @@ function searchStudent() {
         printWindow.document.close();
 
     } else {
-        // இயல்புநிலை alert-க்கு பதிலாக சிவப்பு நிற எச்சரிக்கை காட்டப்படும்
-        errorDiv.innerText = "N.I.C Number தவறானது!";
-        errorDiv.style.display = "block";
-        
-        // பயனர் மீண்டும் தட்டச்சு செய்யத் தொடங்கும்போது சிவப்பு செய்தி மறைந்துவிடும்
-        nicInput.addEventListener("input", function() {
-            errorDiv.style.display = "none";
-        }, { once: true });
-    }
-                                                            }
+        alert("தவறான அடையாள அட்டை எண் அல்லது விபரங்கள் இல்லை!");
+    
+}

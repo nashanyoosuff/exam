@@ -1,7 +1,7 @@
 const studentDatabase = {
     "200871904626": { 
       name: "FAEES ZAINAB SANAH", 
-        result: "" 
+        result: ""  
     }
 
     "200871403665": { 
